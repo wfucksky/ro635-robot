@@ -4,13 +4,13 @@ server:
 simbot:
   core:
     # bot qq账号和密码
-    bots:
+    bots: 1943048206:Qweasd12345
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/ro635_bot?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=GMT
-    username: root
-    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/robot?useUnicode=true&characterEncoding=utf8&useSSL=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: robot
+    password: Woshiwudi1101.
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 

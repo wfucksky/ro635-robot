@@ -20,12 +20,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestPrivateListener {
 
-    private final MessageContentBuilderFactory messageContentBuilderFactory;
-
-    @Autowired
-    public TestPrivateListener(MessageContentBuilderFactory messageContentBuilderFactory) {
-        this.messageContentBuilderFactory = messageContentBuilderFactory;
-    }
+//    private final MessageContentBuilderFactory messageContentBuilderFactory;
+//
+//    @Autowired
+//    public TestPrivateListener(MessageContentBuilderFactory messageContentBuilderFactory) {
+//        this.messageContentBuilderFactory = messageContentBuilderFactory;
+//    }
 
 //    @Autowired
 //    private TestDao testDao;
@@ -36,12 +36,12 @@ public class TestPrivateListener {
      * @param privateMsg
      * @param sender
      */
-//    @OnPrivate
-//    public void repeatMsg(PrivateMsg privateMsg, MsgSender sender) {
+    @OnPrivate
+    public void repeatMsg(PrivateMsg privateMsg, MsgSender sender) {
 //        MessageContentBuilder builder = messageContentBuilderFactory.getMessageContentBuilder();
 //        Test test = testDao.getTestById(1);
 //        MessageContent msg = builder.text(test.getWord()).build();
-//        sender.SENDER.sendPrivateMsg(privateMsg, msg);
-//    }
+        sender.SENDER.sendPrivateMsg(privateMsg.getAccountInfo(), privateMsg.getMsgContent());
+    }
 
 }
