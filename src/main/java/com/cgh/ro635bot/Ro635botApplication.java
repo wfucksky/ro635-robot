@@ -4,6 +4,7 @@ import love.forte.simbot.spring.autoconfigure.EnableSimbot;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * 启动类。
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author ForteScarlet
  */
 @EnableSimbot
+@EnableScheduling
 @MapperScan("com.cgh.ro635bot.dao")
 @SpringBootApplication
 public class Ro635botApplication {
